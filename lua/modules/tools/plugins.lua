@@ -41,4 +41,9 @@ tools["folke/trouble.nvim"] = {
 	cmd = { "Trouble", "TroubleToggle", "TroubleRefresh" },
 	config = conf.trouble,
 }
+tools["gelguy/wilder.nvim"] = {
+	event = "CmdlineEnter",
+	config = conf.wilder,
+	requires = { { "romgrk/fzy-lua-native", after = "wilder.nvim" } },
+}
 return tools
