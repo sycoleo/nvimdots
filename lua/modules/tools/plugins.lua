@@ -31,5 +31,14 @@ tools["jvgrootveld/telescope-zoxide"] = { opt = true, after = "telescope-frecenc
 tools["nathom/filetype.nvim"] = {
 	opt = false,
 }
-
+tools["folke/which-key.nvim"] = {
+	opt = true,
+	keys = "<leader>",
+	config = conf.which_key,
+}
+tools["folke/trouble.nvim"] = {
+	opt = true,
+	cmd = { "Trouble", "TroubleToggle", "TroubleRefresh" },
+	config = conf.trouble,
+}
 return tools

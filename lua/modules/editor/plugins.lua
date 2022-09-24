@@ -7,5 +7,10 @@ editor["nvim-treesitter/nvim-treesitter"] = {
 	event = "BufReadPost",
 	config = conf.nvim_treesitter,
 }
+editor["akinsho/toggleterm.nvim"] = {
+	opt = true,
+	event = "UIEnter",
+	config = conf.toggleterm,
+}
 
 return editor

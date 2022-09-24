@@ -37,6 +37,19 @@ local plug_map = {
 	["v|<leader>ca"] = map_cu("Lspsaga range_code_action"):with_noremap():with_silent(),
 	["n|<C-Up>"] = map_cr("lua require('lspsaga.action').smart_scroll_with_saga(-1)"):with_noremap():with_silent(),
 	["n|<C-Down>"] = map_cr("lua require('lspsaga.action').smart_scroll_with_saga(1)"):with_noremap():with_silent(),
+	-- Plugin nvim-tree
+	["n|<C-n>"] = map_cr("NvimTreeToggle"):with_noremap():with_silent(),
+	["n|<Leader>nf"] = map_cr("NvimTreeFindFile"):with_noremap():with_silent(),
+	["n|<Leader>nr"] = map_cr("NvimTreeRefresh"):with_noremap():with_silent(),
+	-- Plugin trouble
+	["n|gt"] = map_cr("TroubleToggle"):with_noremap():with_silent(),
+	["n|gR"] = map_cr("TroubleToggle lsp_references"):with_noremap():with_silent(),
+	["n|<leader>cd"] = map_cr("TroubleToggle document_diagnostics"):with_noremap():with_silent(),
+	["n|<leader>cw"] = map_cr("TroubleToggle workspace_diagnostics"):with_noremap():with_silent(),
+	["n|<leader>cq"] = map_cr("TroubleToggle quickfix"):with_noremap():with_silent(),
+	["n|<leader>cl"] = map_cr("TroubleToggle loclist"):with_noremap():with_silent(),
+    -- Format with LSP
+    ["n|<leader>fm"] = map_cr("lua vim.lsp.buf.format({async=False})")
 }
 
 bind.nvim_load_mapping(plug_map)
