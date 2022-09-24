@@ -39,5 +39,9 @@ ui["dstein64/nvim-scrollview"] = {
 	event = { "BufReadPost" },
 	config = conf.scrollview,
 }
+ui["EdenEast/nightfox.nvim"] = {
+   opt = false,
+   tag = "v1.0.0",
+}
 
 return ui
